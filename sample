@@ -17,6 +17,7 @@ public class Program
 		h.Add("Hello2");
 		h.Add("Hello3");
 		h.Add("Hello4");
+		h.Add("Hello4");
 		var t = h.Where(x => x.Contains("Hello1") );
 		Console.WriteLine(t.Count());
 	}

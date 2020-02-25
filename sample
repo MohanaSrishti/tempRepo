@@ -1,0 +1,23 @@
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading;
+using System.Globalization;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Hello World");
+		// Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");  
+		Thread.CurrentThread.CurrentCulture = new CultureInfo("de-DE");
+		ObservableCollection<string> h = new ObservableCollection<string>();
+		h.Add("Hello");
+		h.Add("Hello1");
+		h.Add("Hello2");
+		h.Add("Hello3");
+		h.Add("Hello4");
+		var t = h.Where(x => x.Contains("Hello1") );
+		Console.WriteLine(t.Count());
+	}
+}
